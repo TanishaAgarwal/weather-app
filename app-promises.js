@@ -15,7 +15,7 @@ var argv = yargs
 
 var encodedadd = encodeURIComponent(argv.address);
 
-var url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedadd}&key=AIzaSyArue3mB2ifINLkZhumlEqjZEvn9YVzGa4`;
+var url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedadd}`;
  axios.get(url).then((response) =>{
     if(response.data.status === 'ZERO_RESULTS'){
         throw new Error('Unable to found the Address');
